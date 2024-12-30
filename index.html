@@ -5,24 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Studio Mdance</title>
     <style>
+        /* Style global */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f8f9fa;
+            color: #333;
         }
-        header {
-            background: url('background-image.jpg') no-repeat center center/cover;
+
+        /* Menu de navigation */
+        nav {
+            background: #333;
             color: white;
+            padding: 10px;
             text-align: center;
-            padding: 60px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* En-tête avec image */
+        header {
+            background: url('lien-vers-ton-image.jpg') no-repeat center center/cover;
+            height: 300px;
+            text-align: center;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
         header h1 {
-            font-size: 2rem;
+            font-size: 2.5rem;
+            margin: 0;
         }
         header p {
-            margin: 10px 0;
+            font-size: 1.2rem;
         }
+
+        /* Bouton S'INSCRIRE */
         .button {
             background-color: #007BFF;
             color: white;
@@ -31,7 +62,6 @@
             border-radius: 5px;
             font-size: 1rem;
             text-transform: uppercase;
-            cursor: pointer;
             text-decoration: none;
             display: inline-block;
             margin-top: 20px;
@@ -39,6 +69,8 @@
         .button:hover {
             background-color: #0056b3;
         }
+
+        /* Section Information */
         .container {
             max-width: 800px;
             margin: 20px auto;
@@ -51,6 +83,8 @@
             font-size: 1.5rem;
             margin-bottom: 10px;
         }
+
+        /* Pied de page */
         footer {
             text-align: center;
             padding: 20px;
@@ -58,30 +92,42 @@
             color: white;
             margin-top: 20px;
         }
-        a {
-            color: #007BFF;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
     </style>
 </head>
 <body>
+    <!-- Menu de navigation -->
+    <nav>
+        <a href="#info">Information</a>
+        <a href="#inscription">S'inscrire</a>
+    </nav>
+
+    <!-- En-tête avec image -->
     <header>
         <h1>Cours et soirée Bachata/Salsa</h1>
-        <p>Vendredi 7 février 2025</p>
-        <p>De 19h30 à 1h</p>
-        <a href="https://forms.gle/VdTomvEeWYAknGKd8" class="button">S'inscrire</a>
+        <p>Vendredi 7 février 2025 - De 19h30 à 1h</p>
+        <a href="#inscription" class="button">S'INSCRIRE</a>
     </header>
-    <div class="container">
+
+    <!-- Section Information -->
+    <div id="info" class="container">
         <h2>Information</h2>
         <p>
-            <strong>Studio Mdance</strong> propose le vendredi <strong>7 février 2025</strong>
+            <strong>Studio Mdance</strong> propose le vendredi <strong>7 février 2025</strong> 
             de <strong>19h30 à 1h</strong>, un <strong>Cours de Salsa</strong> suivi d’un <strong>Cours de Bachata</strong>, 
             puis d’une soirée conviviale dans la salle des fêtes de Garancières.
         </p>
     </div>
+
+    <!-- Section Inscription -->
+    <div id="inscription" class="container">
+        <h2>Inscription</h2>
+        <p>
+            Pour participer à cet événement, veuillez cliquer sur le bouton ci-dessous et remplir le formulaire d'inscription.
+        </p>
+        <a href="https://forms.gle/ton-lien-raccourci" class="button" target="_blank">S'INSCRIRE</a>
+    </div>
+
+    <!-- Pied de page -->
     <footer>
         &copy; 2025 Studio Mdance
     </footer>
